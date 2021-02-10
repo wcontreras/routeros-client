@@ -1,5 +1,5 @@
 {
-    "name": "@anthonyrdfork/routeros-client",
+    "name": "routeros-client-fork",
     "version": "1.1.2",
     "description": "Abstraction layer over the node-routeros API",
     "main": "./dist/index",
