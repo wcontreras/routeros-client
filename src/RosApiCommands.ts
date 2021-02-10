@@ -370,9 +370,11 @@ export class RosApiCommands extends RouterOSAPICrud {
             action = "";
         } else if (action && typeof action === "string") {
             action = "/" + action.replace(/^\//, "");
+        }else if (action && typeof action === "object"){
+            action = this.makeQuery(action, false);
         }
 
-        const query = this.fullQuery(action);
+        const query = this.fullQuery();
         info("Streaming query %o", query);
         this.queryVal = [];
         this.proplistVal = "";
